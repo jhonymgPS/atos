@@ -1,0 +1,18 @@
+
+  <p>
+    <mat-toolbar color="primary">
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>Atos</span>
+      <span class="nav-spacer"></span>
+      <ng-template [ngIf]="isLoggedIn()">
+
+        <button mat-icon-button class="example-icon" aria-label="Log out"
+                (click)="logout()">
+          <mat-icon>arrow_forward</mat-icon>
+        </button>
+      </ng-template>
+
+    </mat-toolbar>
+  </p>

@@ -1,0 +1,32 @@
+
+<div class="container">
+  <div class="login">
+
+    <h2 style="text-align: center">Atos</h2>
+
+    <form [formGroup]="loginForm" (ngSubmit)="login()" >
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput formControlName="email"
+                 type="email" placeholder="Correo">
+          <mat-icon matSuffix>person</mat-icon>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Password</mat-label>
+          <input matInput formControlName="password"
+                 [type]="hide ? 'password' : 'text'" placeholder="Password">
+          <mat-icon matSuffix>vpn_key</mat-icon>
+        </mat-form-field>
+      </p>
+      <p style="text-align: center">
+        <button [disabled]="loginForm.invalid" mat-button style="color: forestgreen">Log in</button>
+      </p>
+    </form>
+
+  </div>
+
+</div>
+
